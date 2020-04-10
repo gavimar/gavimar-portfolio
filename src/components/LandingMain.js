@@ -118,7 +118,8 @@ class LandingMain extends React.Component {
     return (
       <div className="landing-main">
 <div className="landing-title">
-  <h1 className="fadeIn">Gádor Villanueva Martos</h1>
+  <h1 className="title1">Gádor Villanueva Martos</h1>
+  <h1 className="title2">Front-end Developer</h1>
 </div>
 
         <div className="bg">
