@@ -1,4 +1,6 @@
-import React from 'react';
+// import React from 'react';
+
+const startSnow = () =>{
 
 /*!
 // Snow.js - v0.0.3
@@ -43,7 +45,7 @@ var snow = [],
 	marginRight;
 
 function randomise(range) {
-	rand = Math.floor(range * Math.random());
+	let rand = Math.floor(range * Math.random());
 	return rand;
 }
 
@@ -52,7 +54,7 @@ function initSnow() {
 	marginBottom = document.body.scrollHeight - 5;
 	marginRight = document.body.clientWidth - 15;
 
-	for (i = 0; i <= snowMax; i++) {
+	for (let i = 0; i <= snowMax; i++) {
 		coords[i] = 0;
 		lefr[i] = Math.random() * 15;
 		pos[i] = 0.03 + Math.random() / 10;
@@ -78,7 +80,7 @@ function resize() {
 }
 
 function moveSnow() {
-	for (i = 0; i <= snowMax; i++) {
+	for (let i = 0; i <= snowMax; i++) {
 		coords[i] += pos[i];
 		snow[i].posY += snow[i].sink;
 		snow[i].style.left = snow[i].posX + lefr[i] * Math.sin(coords[i]) + "px";
@@ -93,13 +95,14 @@ function moveSnow() {
 	setTimeout("moveSnow()", snowRefresh);
 }
 
-for (i = 0; i <= snowMax; i++) {
+for (let i = 0; i <= snowMax; i++) {
 	document.write("<span id='flake" + i + "' style='" + snowStyles + "position:absolute;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
 }
 
-export default {resize, initSnow};
 
+window.addEventListener('resize', resize);
+window.addEventListener('load', initSnow);
 
+}
 
-// window.addEventListener('resize', resize);
-// window.addEventListener('load', initSnow);
+export default startSnow;
