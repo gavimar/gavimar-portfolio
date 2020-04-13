@@ -19,8 +19,10 @@ export default class App extends React.Component {
       <div className="App">
       <Switch>
         <Route exact path="/">
+          <div className="wrapper">
         <Header/>
           <LandingMain/>
+          </div>
         </Route>
         <Route exact path="/Portfolio">
           <Portfolio/>
