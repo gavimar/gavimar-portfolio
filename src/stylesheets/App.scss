@@ -1,9 +1,11 @@
 @import "./base/reset";
+// @import "~bootstrap/scss/bootstrap";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./layout/structure";
 @import "./layout/header";
 @import "./layout/landingMain";
+@import "./layout/portfolio";
 
 
 
